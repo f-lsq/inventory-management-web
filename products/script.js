@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   // SCRIPT FOR INVENTORY ITEMS
   // Create Inventory Items Header
   const response = await axios.get("/../data.json");
-  let inventoryHeader = ["SKU", "Name", "Quantity", "Category", "Warehouse", "Availability", "Settings"];
+  let inventoryHeader = ["SKU", "Image", "Name", "Quantity", "Category", "Warehouse", "Availability", "Settings"];
 
   createInvHeader(response);
   // CRUD FUNCTIONS
@@ -34,11 +34,23 @@ document.addEventListener("DOMContentLoaded", async function () {
       // Add list items into the created unordered list items
       for (let i of inventoryHeader) {
         const liElement = document.createElement("li");
-        if (i == "Name") {
-          liElement.classList.add("inventory-name");
-        }
-        liElement.innerHTML = r[i.toLowerCase()];
-        ulElement.appendChild(liElement);
+        if (i == "Image") {
+          console.log(r[i.toLowerCase()]);
+          liElement.innerHTML = `<img class="inventory-image" src="${r[i.toLowerCase()]}"/>`
+        } else if (i == "Settings") {
+          liElement.classList.add("inventory-settiings");
+          editButton = document.createElement("button")
+          editButton.innerHTML = "<i class='bx bx-edit'></i>"
+          deleteButton = document.createElement("button")
+          deleteButton.innerHTML = "<i class='bx bx-trash'></i>"
+          liElement.append(editButton, deleteButton)
+        } else {
+          if (i == "Name") {
+            liElement.classList.add("inventory-name");
+          }
+          liElement.innerHTML = r[i.toLowerCase()];
+          }
+          ulElement.appendChild(liElement);
         }
       }
     }
