@@ -1,0 +1,75 @@
+#main-summary,
+#main-body {
+  padding: 0px 1.2rem;
+}
+
+#main-body div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#main-body div button {
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, margin-top 0.15s, margin-bottom 0.15s, margin-top 0.15s, box-shadow 0.15s;
+  box-shadow: 0 0.1rem 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+#main-body div button i {
+  margin-right: 5px;
+}
+
+#main-body div button:active {
+  margin-top: calc(0.5rem + 0.1rem);  
+  margin-bottom: calc(0.5rem - 0.1rem);
+  box-shadow: none;
+}
+
+#add-button {
+  background-color: rgb(2,3,129);
+  color: white;
+  margin: 1rem;
+}
+
+#add-button:hover {
+  background-color: #FFF200;
+  color: black;
+}
+
+#filter-button {
+  background-color: white;
+  color: black;
+}
+
+#filter-button:hover {
+  background-color: rgb(135, 135, 135);
+  color: white;
+}
+
+#search-terms {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(135, 135, 135);
+  border-radius: 5px; 
+  outline: none;
+}
+
+#inventory-header {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+}
+
+#inventory-header li {
+  border-bottom: 1px solid rgb(184, 184, 184);
+  flex: 1;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(135, 135, 135);
+  padding: 0.5rem;
+}

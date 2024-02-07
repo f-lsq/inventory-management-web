@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(241, 241, 241);
   height: 100vh;
   width: 100%;
   margin-bottom: 1000px;
@@ -16,17 +16,18 @@ body {
   position: relative;
   top: 0px;
   left: 0px;
-  width: calc(50px + 2 * 0.8rem);
+  width: calc(50px + 2 * 0.4rem);
   background: rgb(2,3,129);
   /* background: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%); #000450 */
   height: 100vh;
-  padding: 8px 0.8rem;
+  padding: 8px 0.4rem;
   transition: width 0.5s;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 #navbar.active {
-  width: 250px;
+  width: 180px;
+  padding: 8px 0.8rem;
   
 }
 
@@ -36,7 +37,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   line-height: 50px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   cursor: pointer;
   color: white;
   transition: color 0.2s;
@@ -76,7 +77,7 @@ body {
 }
 
 #nav-top .logo span {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-right: 0.4rem;
 }
@@ -117,10 +118,18 @@ body {
 #navbar ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 80%;
   margin-bottom: 0.8rem;
 }
+
+#nav-list-top {
+  flex: 1;
+}
+
+#nav-list-bottom {
+  align-items: flex-end;
+}
+
 
 #navbar ul li {
   position: relative;
@@ -149,12 +158,13 @@ body {
   min-width: 45px;
   line-height: 45px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 #navbar ul li a span {
   white-space: nowrap;
   display: none;
+  font-size: 0.9rem;
 }
 
 #navbar.active ul li a span {
@@ -166,13 +176,12 @@ body {
   background: rgba(255, 255, 208, 0.5);
   top: 50%;
   transform: translateY(-50%);
-  left: 70px;
+  left: 60px;
   white-space: nowrap;
   border-radius: 10px;
   padding: 0.4rem 1.2rem;
   line-height: 1.8rem;
   z-index: 3142;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
   display: none;
 }
 
@@ -185,17 +194,52 @@ body {
 }
 
 #main-content {
-  margin-left: calc(50px + 2 * 0.8rem);
+  margin-left: calc(50px + 2 * 0.4rem);
   transition: margin-left 0.5s;
-  padding: 0.8rem;
 }
 
 #navbar.active ~ #main-content{
-  margin-left: 250px;
+  margin-left: 180px;
   width: calc(100% -250px);
 }
 
-#main-container {
+#main-header {
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  padding: 8px 1.2rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+
+#main-header h1,
+#main-header i {
+  font-size: 1.2rem;
+  line-height: 45px;
+}
+
+#sub-header {
+  display: flex;
+  padding: 4px 1.2rem;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0.4rem 0.8rem -0.8rem rgba(0, 0, 0, 0.2);
+  margin-top: 0.5px;
+  font-size: 0.8rem;
+}
+
+#main-header i,
+#sub-header i {
+  color: rgb(2,3,129);
+  cursor: pointer;
+}
+
+#sub-header a,
+#sub-header p {
+  text-decoration: none;
+  color: rgb(125, 125, 125);
+}
+
+.sub-header-separator {
+  margin: 0 10px;
 }

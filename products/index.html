@@ -9,14 +9,14 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="/../general.css">
   <link rel="stylesheet" href="style.css">
-  <title>Inventory | Best Buy</title>
+  <title>Inventory | BEST BUY</title>
   
 </head>
 <body>
   <div id="navbar">
     <div id="nav-top">
       <div class="logo">
-        <span>Best Buy</span>
+        <span>BEST BUY</span>
         <i class='bx bxs-purchase-tag-alt'></i>
       </div>
       <i id="menuBtn" class='bx bx-menu'></i>
@@ -88,11 +88,54 @@
     </ul>
   </div>
   <div id="main-content">
-    <div id="main-container">
-      <h1>Inventory</h1>
-      <h1>Right Side</h1>
+    <div id="header-container">
+      <div id="main-header">
+        <h1>Inventory</h1>
+        <i class='bx bxs-bell'></i>
+      </div>
+      <div id="sub-header">
+        <a href="/dashboard/index.html"><i class='bx bxs-home'></i></a>
+        <p class="sub-header-separator">/</p>
+        <p></p><a href="/products/index.html">Inventory</a></p>
+      </div>
+    </div>
+    
+    <div id="main-summary">
+      <div>
+        <h2>Inventory Summary</h2>
+      </div>
+    </div>
+    <div id="main-body">
+      <div>
+        <h3>Inventory Items</h2>
+        <div>
+          <input type="search" placeholder="Search" id="search-terms">
+          <button id="add-button">
+            <i class='bx bx-plus' ></i>
+            Add a New Product
+          </button>
+          <button id="filter-button">
+            <i class='bx bx-filter-alt' ></i>
+            Filter
+          </button>
+        </div>
+      </div>
+      <div id="inventory-list">
+        <ul id="inventory-header">
+          <li>ID</li>
+          <li>Name</li>
+          <li>Quantity</li>
+          <li>Category</li>
+          <li>Warehouse</li>
+          <li>Availability</li>
+          <li>Settings</li>
+        </ul>
+      </div>
+      
     </div>
   </div>
+  <!-- Axios JS -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
