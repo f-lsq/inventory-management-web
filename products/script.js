@@ -1,7 +1,7 @@
 // Controller Scripts - Event Listeners and Functions
 document.addEventListener("DOMContentLoaded", async function () {
-  // SCRIPT FOR INVENTORY ITEMS
-  // Create Inventory Items Header
+  // SCRIPT FOR ITEMS
+  // Create Items Header
   async function main() {
     const response = await axios.get("/../data.json");
     let inventoryHeader = ["ID", "Image", "Name", "Quantity", "Category", "Warehouse", "Availability", "Settings"];
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           deleteButton.innerHTML = "<i class='bx bx-trash'></i>"
           deleteButton.classList.add("delete-button");
           deleteButton.addEventListener("click", function(){
-            processDeleteTask(r, data);
+            processDeleteTask(r, data, header);
           })
           liElement.append(editButton, deleteButton)
         } else {
@@ -49,52 +49,57 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
       }
     }
-
-    function createHeader(header) {
-      const inventoryList = document.querySelector("#inventory-list");
-      const ulElement = document.createElement("ul");
-      ulElement.setAttribute("id", "inventory-header");
-      inventoryList.appendChild(ulElement);
-      for (let i of header) {
-        const liElement = document.createElement("li");
-        if (i == "Name") {
-          liElement.classList.add("inventory-name");
-        }
-        liElement.innerHTML = i;
-        ulElement.appendChild(liElement);
-        }
+  /**
+   * Creats a header for the taskitems table
+   * @param {array} header Title of each table column
+   */
+  function createHeader(header) {
+    const inventoryList = document.querySelector("#inventory-list");
+    const ulElement = document.createElement("ul");
+    ulElement.setAttribute("id", "inventory-header");
+    inventoryList.appendChild(ulElement);
+    for (let i of header) {
+      const liElement = document.createElement("li");
+      if (i == "Name") {
+        liElement.classList.add("inventory-name");
       }
-
-    /**
-     * UI when users click the edit button
-     * @param {object} task A task's infomation
-     * @param {*} data Data from data.json file
-     */
-    function processEditTask(task, data, header) {
-      editedItem = []
-      for (let h of header) {
-        if (h != "ID" && h != "Settings") {
-          const editedField = prompt(`Enter the new ${h.toLowerCase()}: `, task[h.toLowerCase()]);
-          editedItem.push(editedField);
-        }
-      } 
-
-      updateTask(task.id, data, editedItem, header);
-      displayTask(header, data);
-      
-    }
-
-    /**
-     * UI when users click the delete button
-     * @param {object} task A task's infomation
-     * @param {*} data Data from data.json file
-     */
-    function processDeleteTask(task, data) {
-      const confirmDelete = confirm(`Are you sure that you want to delete ${task.name}?`)
-      if (confirmDelete) {
-        deleteTask(task.id, data);
+      liElement.innerHTML = i;
+      ulElement.appendChild(liElement);
       }
     }
+
+  /**
+   * UI when users click the edit button
+   * @param {object} task A task's infomation
+   * @param {*} data Data from data.json file
+   */
+  function processEditTask(task, data, header) {
+    editedItem = []
+    for (let h of header) {
+      if (h != "ID" && h != "Settings") {
+        const editedField = prompt(`Enter the new ${h.toLowerCase()}: `, task[h.toLowerCase()]);
+        editedItem.push(editedField);
+      }
+    } 
+
+    updateTask(task.id, data, editedItem, header);
+    displayTask(header, data);
+    
+  }
+
+  /**
+   * UI when users click the delete button
+   * @param {object} task A task's infomation
+   * @param {*} data Data from data.json file
+   */
+  function processDeleteTask(task, data, header) {
+    const confirmDelete = confirm(`Are you sure that you want to delete ${task.name}?`)
+    if (confirmDelete) {
+      deleteTask(task.id, data, header);
+    }
+    displayTask(header, data);
+  } 
+    
 
     await main();
 
