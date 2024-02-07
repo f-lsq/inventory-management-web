@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "sku": 6540002,
+      "id": 6540002,
       "name": "ASUS - NVIDIA GeForce RTX 4070 Overclock 12GB GDDR6X PCI Express 4.0 Graphics Card",
       "model": "TUF-RTX4070-O12G-GAMING",
       "quantity": 2,
@@ -13,7 +13,7 @@
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6540/6540002_sd.jpg;maxHeight=2000;maxWidth=2000"
     },
     {
-      "sku": 6505155,
+      "id": 6505155,
       "name": "Samsung - HW-B650/ZA 3.1ch Soundbar with Dolby 5.1 / DTS Virtual:X - Black",
       "model": "HW-B650/ZA",
       "quantity": 658,
@@ -25,7 +25,7 @@
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6505/6505155_sd.jpg;maxHeight=640;maxWidth=550"
     },
     {
-      "sku": 6540134,
+      "id": 6540134,
       "name": "Pokémon - Trading Card Game: Paldea Evolved Sleeved Boosters - Styles May Vary",
       "model": "185-87350",
       "quantity": 0,
@@ -37,7 +37,7 @@
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6540/6540134_sd.jpg;maxHeight=640;maxWidth=550"
     },
     {
-      "sku": 6571678,
+      "id": 6571678,
       "name": "Avatar: Frontiers of Pandora Deluxe Edition - Xbox Series X, Xbox Series S [Digital]",
       "model": "G3Q-02217",
       "quantity": 248,
@@ -49,7 +49,7 @@
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6571/6571678_sd.jpg;maxHeight=640;maxWidth=550"
     },
     {
-      "sku": 6571727,
+      "id": 6571727,
       "name": "STARLINK - Standard Kit AX Tri Band Wi-Fi System (latest generation) - White",
       "model": "02534001",
       "quantity": 563,

@@ -41,7 +41,8 @@
   margin-right: 5px;
 }
 
-#main-body div button:active {
+#add-button:active,
+#filter-button:active {
   margin-top: calc(0.5rem + 0.1rem);  
   margin-bottom: calc(0.5rem - 0.1rem);
   box-shadow: none;
@@ -124,5 +125,44 @@
   height: 70%;
   width: 70%;
   object-fit: contain;
-  
 }
+
+.edit-button,
+.delete-button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 0.2rem;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0.1rem 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button {
+  background-color: #0cb636;
+}
+
+.delete-button {
+  background-color: #DD1C1A;
+}
+
+.edit-button:hover {
+  background-color: #088527;
+}
+
+.delete-button:hover {
+  background-color: #bb1816;
+}
+
+.edit-button:active,
+.delete-button:active {
+  margin-top: 0.1rem;
+  box-shadow: none;
+}
+
+.inventory-settings {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
