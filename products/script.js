@@ -4,10 +4,15 @@ document.addEventListener("DOMContentLoaded", async function () {
   // Create Items Header
   async function main() {
     const response = await axios.get("/../data.json");
-    let inventoryHeader = ["ID", "Image", "Name", "Quantity", "Category", "Warehouse", "Availability", "Settings"];
+    let taskHeader = ["ID", "Image", "Name", "Quantity", "Category", "Warehouse", "Availability", "Settings"];
 
     // CRUD FUNCTIONS
-    displayTask(inventoryHeader, response.data);
+    displayTask(taskHeader, response.data);
+
+    document.querySelector("#add-button").addEventListener("click", function(){
+      document.querySelector("#add-new-item").classList.toggle("add-active");
+      displayAddTask(taskHeader);
+    })
   }
 
   async function displayTask(header, data) {
@@ -49,8 +54,27 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
       }
     }
+  
   /**
-   * Creats a header for the taskitems table
+   * Display the input fields of the "Add Input Item Information" section
+   * @param {array} header Contains the header for the product information
+   */
+  function displayAddTask(header){
+    document.querySelector("#add-item-inputs").innerHTML = "";
+    addItemInputs = document.querySelector("#add-item-inputs");
+    for (let eachHeader of header) {
+      if (eachHeader != "Settings")  {
+        addLabel = document.createElement("label");
+        addLabel.innerHTML = `${eachHeader}: `;
+        addInput = document.createElement("input");
+        addInput.setAttribute("id", `task${eachHeader}`);
+        addItemInputs.appendChild(addLabel);
+        addLabel.appendChild(addInput);
+      } 
+    }
+  }
+  /**
+   * Creates a header for the taskitems table
    * @param {array} header Title of each table column
    */
   function createHeader(header) {

@@ -166,3 +166,16 @@
   align-items: flex-start;
 }
 
+#add-new-item {
+  background-color: red;
+  display: none !important;
+  overflow: hidden;
+}
+
+#add-new-item.add-active {
+  display: flex !important;
+  background-color: rgb(255, 255, 85);
+  flex-direction: column;
+  
+}
+

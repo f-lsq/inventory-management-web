@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // SCRIPT FOR DARKMODE TOGGLE
-  const darkMode = document.querySelector("#darkMode");
-  const body = document.querySelector("body");
-  darkMode.addEventListener("click", function(){
-    body.classList.toggle("dark-mode");
-  }); 
+  // const darkMode = document.querySelector("#darkMode");
+  // const body = document.querySelector("body");
+  // darkMode.addEventListener("click", function(){
+  //   body.classList.toggle("dark-mode");
+  // }); 
 })
