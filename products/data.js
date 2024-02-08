@@ -1,8 +1,15 @@
 // Model Scripts - Data Processing
 
 
-function createTask() {
-
+function createTask(data) {
+  itemObject = {};
+  for (let eachItem of data["products"]) {
+    for (let eachItemInfo in eachItem){
+      itemObject[eachItemInfo] = document.querySelector(`#task${eachItemInfo}`).value;
+    }
+    break;
+  }
+  response.data["products"].push(itemObject);
 }
 
 /**

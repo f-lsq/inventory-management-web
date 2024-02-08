@@ -14,12 +14,8 @@ document.addEventListener("DOMContentLoaded", async function () {
       displayAddTask(response.data);
 
       document.querySelector("#add-item-title button").addEventListener("click", function(){
-        for (let eachItem of response.data["products"]) {
-          for (let eachItemInfo in eachItem){
-            console.log("eachItemInfo =>", eachItemInfo);
-          }
-          break;
-        }
+        createTask(response.data);
+        displayTask(taskHeader, response.data);
       })
     })
   }
