@@ -63,13 +63,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     document.querySelector("#add-item-inputs").innerHTML = "";
     addItemInputs = document.querySelector("#add-item-inputs");
     for (let eachHeader of header) {
+      addItemDiv = addItemInputs.appendChild(document.createElement("div"));
       if (eachHeader != "Settings")  {
         addLabel = document.createElement("label");
-        addLabel.innerHTML = `${eachHeader}: `;
+        addLabel.innerHTML = `${eachHeader}`;
         addInput = document.createElement("input");
         addInput.setAttribute("id", `task${eachHeader}`);
-        addItemInputs.appendChild(addLabel);
-        addLabel.appendChild(addInput);
+        addItemDiv.append(addLabel, addInput);
       } 
     }
   }

@@ -32,7 +32,7 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s, margin-top 0.15s, margin-bottom 0.15s, margin-top 0.15s, box-shadow 0.15s;
+  transition: background-color 0.2s, color 0.2s, margin-top 0.15s, margin-bottom 0.15s, box-shadow 0.15s;
   box-shadow: 0 0.1rem 10px -5px rgba(0, 0, 0, 0.2);
 }
 
@@ -136,6 +136,7 @@
   border-radius: 5px;
   text-align: center;
   box-shadow: 0 0.1rem 10px -5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s, margin-top 0.15s, box-shadow 0.15s;
 }
 
 .edit-button {
@@ -167,15 +168,63 @@
 }
 
 #add-new-item {
-  background-color: red;
   display: none !important;
   overflow: hidden;
+  color: rgb(69, 69, 69);
 }
 
 #add-new-item.add-active {
   display: flex !important;
-  background-color: rgb(255, 255, 85);
+  background-color: rgb(228, 228, 243);
   flex-direction: column;
-  
+  padding: 1.2rem 1.6rem;
+  border-radius: 10px;
 }
 
+#add-item-title {
+  width: 100%;
+  padding: 0.1rem;
+}
+
+#add-item-title button {
+  border: none;
+  cursor: pointer;
+  background-color:rgb(20, 135, 217);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  box-shadow: 0 0.1rem 10px -5px rgba(0, 0, 0, 0.2);
+  font-size: 0.7rem;
+  transition: background-color 0.2s, margin-top 0.15s, margin-bottom 0.15s, box-shadow 0.15s;
+}
+
+#add-item-title button:hover {
+  background-color:rgb(11, 111, 182);
+}
+
+#add-item-title button:active {
+  margin-top: 0.1rem;
+  margin-bottom: -0.1rem;
+  box-shadow: none;
+}
+
+#add-item-inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  background-color: green;
+}
+
+#add-item-inputs div {
+  max-width: 30%;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+}
+
+#add-item-inputs input {
+  outline: none;
+  text-align: right;
+  background-color: green;
+}
