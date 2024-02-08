@@ -170,7 +170,7 @@
 #add-new-item {
   display: none !important;
   overflow: hidden;
-  color: rgb(69, 69, 69);
+  color: rgb(51, 51, 51);
 }
 
 #add-new-item.add-active {
@@ -179,11 +179,16 @@
   flex-direction: column;
   padding: 1.2rem 1.6rem;
   border-radius: 10px;
+  margin: 0.5rem 0;
 }
 
 #add-item-title {
   width: 100%;
   padding: 0.1rem;
+}
+
+#add-item-title h4 {
+  font-size: 0.8rem;
 }
 
 #add-item-title button {
@@ -211,20 +216,20 @@
 #add-item-inputs {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  outline: none;
-  background-color: green;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
 }
 
 #add-item-inputs div {
-  max-width: 30%;
-  background-color: red;
   display: flex;
-  justify-content: space-between;
+  width: 220px;
+  margin: 0.3rem 0;
 }
 
 #add-item-inputs input {
   outline: none;
-  text-align: right;
-  background-color: green;
+  border: 1px solid gray;
+  border-radius: 3px;
+  background-color: white;
 }

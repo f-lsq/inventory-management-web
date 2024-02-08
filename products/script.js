@@ -11,7 +11,16 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     document.querySelector("#add-button").addEventListener("click", function(){
       document.querySelector("#add-new-item").classList.toggle("add-active");
-      displayAddTask(taskHeader);
+      displayAddTask(response.data);
+
+      document.querySelector("#add-item-title button").addEventListener("click", function(){
+        for (let eachItem of response.data["products"]) {
+          for (let eachItemInfo in eachItem){
+            console.log("eachItemInfo =>", eachItemInfo);
+          }
+          break;
+        }
+      })
     })
   }
 
@@ -59,18 +68,19 @@ document.addEventListener("DOMContentLoaded", async function () {
    * Display the input fields of the "Add Input Item Information" section
    * @param {array} header Contains the header for the product information
    */
-  function displayAddTask(header){
+  function displayAddTask(data){
     document.querySelector("#add-item-inputs").innerHTML = "";
     addItemInputs = document.querySelector("#add-item-inputs");
-    for (let eachHeader of header) {
-      addItemDiv = addItemInputs.appendChild(document.createElement("div"));
-      if (eachHeader != "Settings")  {
+    for (let eachItem of data["products"]) {
+      for (let eachItemInfo in eachItem){
+        addItemDiv = addItemInputs.appendChild(document.createElement("div"));
         addLabel = document.createElement("label");
-        addLabel.innerHTML = `${eachHeader}`;
+        addLabel.innerHTML = `${eachItemInfo[0].toUpperCase() + eachItemInfo.slice(1)}`;
         addInput = document.createElement("input");
-        addInput.setAttribute("id", `task${eachHeader}`);
+        addInput.setAttribute("id", `task${eachItemInfo}`);
         addItemDiv.append(addLabel, addInput);
-      } 
+      }
+      break;
     }
   }
   /**
