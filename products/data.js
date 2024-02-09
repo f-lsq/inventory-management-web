@@ -9,7 +9,7 @@ function createTask(data) {
     }
     break;
   }
-  response.data["products"].push(itemObject);
+  data["products"].push(itemObject);
 }
 
 /**

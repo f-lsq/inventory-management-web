@@ -62,6 +62,16 @@
     }
   ],
   "orders": [
+    {
+      "id": 45000001,
+      "customer-id": 1004,
+      "name": "Miles Morales",
+      "date-placed": "2023/12/29 2203HR",
+      "total": 599.99,
+      "items": 1,
+      "payment": "Card",
+      "status": "Unconfirmed"
+    }
 
   ],
   "customers": [
