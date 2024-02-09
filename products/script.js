@@ -4,22 +4,36 @@ document.addEventListener("DOMContentLoaded", async function () {
   // Create Items Header
   async function main() {
     const response = await axios.get("/../data.json");
-    let taskHeader = ["ID", "Image", "Name", "Quantity", "Category", "Warehouse", "Availability", "Settings"];
-    let taskType = "products";
+
+    // For Products
+    // const TASK_HEADER = ["ID", "Image", "Name", "Quantity", "Category", "Warehouse", "Availability", "Settings"];
+    // const TASK_TYPE = "products";
+
+    // For Orders
+    const TASK_HEADER = ["ID", "Name", "Date", "Items", "Spending", "Status", "Settings"];
+    const TASK_TYPE = "orders";
+
+    // For Customers
+    //const TASK_HEADER = ["ID", "Image", "Name", "Address", "Phone", "Purchases", "Spending", "Settings"];
+    //const TASK_TYPE = "customers";
+
+
     
     // CRUD FUNCTIONS
-    displayTask(taskHeader, response.data, taskType);
+    displayTask(TASK_HEADER, response.data, TASK_TYPE);
 
     document.querySelector("#add-button").addEventListener("click", function(){
       document.querySelector("#add-new-item").classList.toggle("add-active");
-      displayAddTask(response.data, taskType);
+      displayAddTask(response.data, TASK_TYPE);
 
       document.querySelector("#add-item-title button").addEventListener("click", function(){
-        createTask(response.data);
-        displayTask(taskHeader, response.data, taskType);
+        createTask(response.data, TASK_TYPE);
+        displayTask(TASK_HEADER, response.data, TASK_TYPE);
       })
     })
   }
+
+
 
   /**
    * Displays all tasks in a table on the users' screen
@@ -56,8 +70,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             processDeleteTask(r, data, header, type);
           })
           liElement.append(editButton, deleteButton)
+        } else if (i == "Spending") {
+          liElement.innerHTML = `$${r[i.toLowerCase()].toLocaleString()}`;
         } else {
-          if (i == "Name") {
+          if (i == "Name" || i == "Address")  {
             liElement.classList.add("item-name");
           }
           liElement.innerHTML = r[i.toLowerCase()];
@@ -97,7 +113,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     itemList.appendChild(ulElement);
     for (let i of header) {
       const liElement = document.createElement("li");
-      if (i == "Name") {
+      if (i == "Name" || i == "Address") {
         liElement.classList.add("item-name");
       }
       liElement.innerHTML = i;

@@ -64,21 +64,201 @@
   "orders": [
     {
       "id": 45000001,
-      "customer-id": 1004,
       "name": "Miles Morales",
-      "date-placed": "2023/12/29 2203HR",
-      "total": 599.99,
+      "customer-id": 100042,
+      "date": "2024/02/09 2203HR",
       "items": 1,
-      "payment": "Card",
-      "status": "Unconfirmed"
+      "spending": 599.99,
+      "status": "Paid"
+    },
+    {
+      "id": 45000002,
+      "name": "Pavitr Prabhakar",
+      "customer-id": 150101,
+      "date": "2024/01/16 0354HR",
+      "items": 3,
+      "spending": 1727.72,
+      "status": "Shipped"
+    },
+    {
+      "id": 45000003,
+      "name": "Miguel O'Hara",
+      "customer-id": 100928,
+      "date": "2024/01/30 1425HR",
+      "items": 2,
+      "spending": 700.78,
+      "status": "Picked"
+    },
+    {
+      "id": 45000004,
+      "name": "Gwendolyn Maxine Stacy",
+      "customer-id": 100065,
+      "date": "2024/02/06 0354HR",
+      "items": 1,
+      "spending": 699.99,
+      "status": "Invoice"
+    },
+    {
+      "id": 45000005,
+      "name": "Margo Kess",
+      "customer-id": 122191,
+      "date": "2023/12/25 1516HR",
+      "items": 1,
+      "spending": 64.99,
+      "status": "Received"
+    },
+    {
+      "id": 45000006,
+      "name": "Peter Porker",
+      "customer-id": 108311,
+      "date": "2024/01/13 0814HR",
+      "items": 2,
+      "spending": 38.98,
+      "status": "Received"
+    },
+    {
+      "id": 45000007,
+      "name": "Hobart Brown",
+      "customer-id": 100138,
+      "date": "2024/02/01 1607HR",
+      "items": 15,
+      "spending": 67.35,
+      "status": "Paid"
+    },
+    {
+      "id": 45000008,
+      "name": "Margo Kess",
+      "customer-id": 122191,
+      "date": "2024/02/07 1127HR",
+      "items": 2,
+      "spending": 1824.98,
+      "status": "Shipped"
+    },
+    {
+      "id": 45000009,
+      "name": "Margo Kess",
+      "customer-id": 122191,
+      "date": "2024/02/09 0334HR",
+      "items": 1,
+      "spending": 79.99,
+      "status": "Paid"
     }
 
   ],
   "customers": [
+    {
+      "id": 100042,
+      "name": "Miles Morales",
+      "purchases": 1,
+      "spending": 599.99,
+      "email": "miles_m@spidergang.com",
+      "phone": "(610) 100-0042",
+      "address": "83 Rockaway Lane San Jose, CA 01610",
+      "image": "https://i.pinimg.com/564x/76/35/3c/76353cb2a321c87e1fe6e51102eb3f92.jpg"
+    },
+    {
+      "id": 150101,
+      "name": "Pavitr Prabhakar",
+      "purchases": 3,
+      "spending": 1727.72,
+      "email": "pavitr_p@spidergang.com",
+      "phone": "(101) 105-0101",
+      "address": "1201 S Main St Algonquin, IL 50101",
+      "image": "https://i.pinimg.com/564x/a5/8e/f5/a58ef587b31382b316d8ef62f1113d7b.jpg"
+    },
+    {
+      "id": 100928,
+      "name": "Miguel O'Hara",
+      "purchases": 3,
+      "spending": 503.69,
+      "email": "miguel_m@spidersociety.com",
+      "phone": "(928) 100-0928",
+      "address": "5396 North Reese Avenue, Fresno CA 00928",
+      "image": "https://i.pinimg.com/564x/91/f1/d3/91f1d36ae2b2af5cabea154fb183e306.jpg"
+    },
+    {
+      "id": 100065,
+      "name": "Gwendolyn Maxine Stacy",
+      "purchases": 1,
+      "spending": 699.9,
+      "email": "gwen_s@spidergang.com",
+      "phone": "(065) 100-0065",
+      "address": "1577 Clemson Dr Saint Paul, MN 00065",
+      "image": "https://i.pinimg.com/564x/ed/fd/72/edfd72dc3186848cc6804cb40e8466d5.jpg"
+    },
+    {
+      "id": 122191,
+      "name": "Margo Kess",
+      "purchases": 4,
+      "spending": 1969.96,
+      "email": "margo_k@spidergang.com",
+      "phone": "(191) 102-2191",
+      "address": "7611 S Union Park Ave Midvale, UT 22191",
+      "image": "https://i.pinimg.com/564x/f5/43/ca/f543ca08e9cb52ae2b47b51edbfb8964.jpg"
+    },
+    {
+      "id": 108311,
+      "name": "Peter Porker",
+      "purchases": 2,
+      "spending": 38.98,
+      "email": "peter_poker@spidergang.com",
+      "phone": "(311) 100-8311",
+      "address": "9101 Kendale Rd Potomac, MD 08311",
+      "image": "https://i.pinimg.com/564x/51/5c/3d/515c3d73caeff9d8f5149168dd9f23d0.jpg"
+    },
+    {
+      "id": 100138,
+      "name": "Hobart Brown",
+      "purchases": 15,
+      "spending": 67.35,
+      "email": "hobart_b@spidergang.com",
+      "phone": "(138) 100-0138",
+      "address": "7138 Wrangler Circle Laredo, TX 00138",
+      "image": "https://i.pinimg.com/564x/02/23/e8/0223e8daeb9e6f614d9c3afb3aa7a3d4.jpg"
+    }
 
   ],
   "shipping": [
-    
+    {
+      "id": 2395241,
+      "warehouse": "Best Buy Warehouse Bolingbrook",
+      "address": "1201 S Main St Algonquin, IL 50101",
+      "carrier": "UPS",
+      "packages": 1,
+      "status": "Open",
+      "customer-id": 150101,
+      "customer-name": "Pavitr Prabhakar"  
+    },
+    {
+      "id": 2395242,
+      "warehouse": "Best Buy Warehouse Salt Lake City",
+      "address": "7611 S Union Park Ave Midvale, UT 22191",
+      "carrier": "DHL",
+      "packages": 1,
+      "status": "Closed",
+      "customer-id": 122191,
+      "customer-name": "Margo Kess"  
+    },
+    {
+      "id": 2395243,
+      "warehouse": "Best Buy Warehouse Curtis Bay",
+      "address": "9101 Kendale Rd Potomac, MD 08311",
+      "carrier": "UPS",
+      "packages": 1,
+      "status": "Closed",
+      "customer-id": 108311,
+      "customer-name": "Peter Porker"  
+    },
+    {
+      "id": 2395244,
+      "warehouse": "Best Buy Warehouse Salt Lake City",
+      "address": "7611 S Union Park Ave Midvale, UT 22191",
+      "carrier": "DHL",
+      "packages": 2,
+      "status": "Open",
+      "customer-id": 122191,
+      "customer-name": "Margo Kess"  
+    }
   ],
   "warehouse": [
     {
