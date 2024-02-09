@@ -19,9 +19,9 @@ function createTask(data, type) {
  * @param {array} editedItem Edited item's information (Returns only 1)
  * @param {array} header Header of item table
  */
-function updateTask(id, data, editedItem, header) {
+function updateTask(id, data, editedItem, header, type) {
   let editedTask = null;
-  for (let d of data.products) {
+  for (let d of data[type]) {
     if (d.id == id) {
       editedTask = d;
       break;
@@ -38,15 +38,15 @@ function updateTask(id, data, editedItem, header) {
  * @param {int} id The task's ID
  * @param {*} data Data from data.json file
  */
-function deleteTask(id, data) {
+function deleteTask(id, data, type) {
   let editedTask = null;
-  for (let i = 0; i < data.products.length; i++) {
-    if (id == data.products[i].id) {
+  for (let i = 0; i < data[type].length; i++) {
+    if (id == data[type][i].id) {
       editedTask = i+1;
     }
   }
 
   if (editedTask) {
-    data.products.splice(editedTask-1, 1);
+    data[type].splice(editedTask-1, 1);
   }
 }
