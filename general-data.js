@@ -1,6 +1,6 @@
 // JSON BIN ID and the base JSON BIN API URL
 const BIN_ID = "65c79ab0dc74654018a2f44a";
-const BASE_JSON_BIN_URL = "https://api.jsonbin.io/v3/b/65c79ab0dc74654018a2f44a";
+const BASE_JSON_BIN_URL = "https://api.jsonbin.io/v3/b";
 
 // Not recommended
 const MASTER_KEY = "$2a$10$ydkWnR3uLIR.xi39hj1ar.eDfqADGTMiwOiBI5pCP0e9j9Amx/LEO";
@@ -54,4 +54,13 @@ function deleteTask(id, data, type) {
   if (editedTask) {
     data[type].splice(editedTask-1, 1);
   }
+}
+
+async function loadTask() {
+  const response = await axios.get(`${BASE_JSON_BIN_URL}/${BIN_ID}/latest`);
+  return response.data.record;
+}
+
+async function saveTask(data) {
+  
 }
