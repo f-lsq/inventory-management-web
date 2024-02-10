@@ -8,15 +8,15 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // For Orders
     // const TASK_HEADER = ["ID", "Name", "Date", "Items", "Spending", "Status", "Settings"];
-    // const TASK_TYPE = "orders";
+    // const TASK_TYPE = "orders";  
 
     // For Customers
     //const TASK_HEADER = ["ID", "Image", "Name", "Address", "Phone", "Purchases", "Spending", "Settings"];
     //const TASK_TYPE = "customers";
 
-    // For Shipping
-    //const TASK_HEADER = ["ID", "Warehouse", "Address", "Carrier", "Packages", "Status", "Settings"];
-    //const TASK_TYPE = "shipping";
+    // For Employees
+    // const TASK_HEADER = ["ID", "Image", "Name", "Department", "Email", "Joined", "Location", "Settings"];
+    // const TASK_TYPE = "employees";
   
   await main(TASK_HEADER, RESPONSE.data, TASK_TYPE);
 })
