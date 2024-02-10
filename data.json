@@ -66,7 +66,7 @@
       "id": 45000001,
       "name": "Miles Morales",
       "customer-id": 100042,
-      "date": "2024/02/09 2203HR",
+      "date": "2024-02-09 2203HR",
       "items": 1,
       "spending": 599.99,
       "status": "Paid"
@@ -75,7 +75,7 @@
       "id": 45000002,
       "name": "Pavitr Prabhakar",
       "customer-id": 150101,
-      "date": "2024/01/16 0354HR",
+      "date": "2024-01-16 0354HR",
       "items": 3,
       "spending": 1727.72,
       "status": "Shipped"
@@ -84,7 +84,7 @@
       "id": 45000003,
       "name": "Miguel O'Hara",
       "customer-id": 100928,
-      "date": "2024/01/30 1425HR",
+      "date": "2024-01-30 1425HR",
       "items": 2,
       "spending": 700.78,
       "status": "Picked"
@@ -93,7 +93,7 @@
       "id": 45000004,
       "name": "Gwendolyn Maxine Stacy",
       "customer-id": 100065,
-      "date": "2024/02/06 0354HR",
+      "date": "2024-02-06 0354HR",
       "items": 1,
       "spending": 699.99,
       "status": "Invoice"
@@ -102,7 +102,7 @@
       "id": 45000005,
       "name": "Margo Kess",
       "customer-id": 122191,
-      "date": "2023/12/25 1516HR",
+      "date": "2023-12-25 1516HR",
       "items": 1,
       "spending": 64.99,
       "status": "Received"
@@ -111,7 +111,7 @@
       "id": 45000006,
       "name": "Peter Porker",
       "customer-id": 108311,
-      "date": "2024/01/13 0814HR",
+      "date": "2024-01-13 0814HR",
       "items": 2,
       "spending": 38.98,
       "status": "Received"
@@ -120,7 +120,7 @@
       "id": 45000007,
       "name": "Hobart Brown",
       "customer-id": 100138,
-      "date": "2024/02/01 1607HR",
+      "date": "2024-02-01 1607HR",
       "items": 15,
       "spending": 67.35,
       "status": "Paid"
@@ -129,7 +129,7 @@
       "id": 45000008,
       "name": "Margo Kess",
       "customer-id": 122191,
-      "date": "2024/02/07 1127HR",
+      "date": "2024-02-07 1127HR",
       "items": 2,
       "spending": 1824.98,
       "status": "Shipped"
@@ -138,7 +138,7 @@
       "id": 45000009,
       "name": "Margo Kess",
       "customer-id": 122191,
-      "date": "2024/02/09 0334HR",
+      "date": "2024-02-09 0334HR",
       "items": 1,
       "spending": 79.99,
       "status": "Paid"
@@ -258,6 +258,58 @@
       "status": "Open",
       "customer-id": 122191,
       "customer-name": "Margo Kess"  
+    }
+  ],
+  "employees": [
+    {
+      "id": "BB016101",
+      "name": "Johnathon Ohnn",
+      "department": "Sales",
+      "email": "jjohnathon_ornn@bestbuy.com",
+      "joined": "2022-10-10",
+      "location": "Best Buy Pacoima",
+      "password": "thespot00",
+      "image": "https://i.pinimg.com/564x/1e/48/5c/1e485c0b860e7360278e6b99113a213e.jpg"
+    },
+    {
+      "id": "BB016102",
+      "name": "Olivia Octavius",
+      "department": "Research and Development",
+      "email": "olivia_octavius@bestbuy.com",
+      "joined": "2018-08-08",
+      "location": "Best Buy Culver City Westfield",
+      "password": "octapus88",
+      "image": "https://i.pinimg.com/564x/53/04/cc/5304cc7dfc08ccc0ba05862ecd141037.jpg"   
+    },
+    {
+      "id": "BB016103",
+      "name": "Wilson Fisk",
+      "department": "Finance",
+      "email": "wilson_fisk@bestbuy.com",
+      "joined": "2019-01-20",
+      "location": "Best Buy Downey",
+      "password": "kingpin01",
+      "image": "https://i.pinimg.com/564x/b9/05/cb/b905cb16c4ea8577df9d1f898bb1be16.jpg"   
+    },
+    {
+      "id": "BB016104",
+      "name": "Aaron Davis",
+      "department": "Marketing",
+      "email": "aaron_davis@bestbuy.com",
+      "joined": "2019-09-15",
+      "location": "Best Buy West Hollywood",
+      "password": "prower18",
+      "image": "https://i.pinimg.com/564x/5f/40/9a/5f409ab2e08cef3951d4c7d63d271887.jpg"   
+    },
+    {
+      "id": "BB016105",
+      "name": "Alonzo Lincoln",
+      "department": "Human Resources",
+      "email": "alonzo_lincoln@bestbuy.com",
+      "joined": "2023-12-28",
+      "location": "Pacific Sales Kitchen & Home Burbank",
+      "password": "tombstone13",
+      "image": "https://i.pinimg.com/564x/79/16/62/791662fbdf16871c09c76460c1e094e7.jpg"   
     }
   ],
   "warehouse": [
