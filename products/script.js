@@ -1,7 +1,6 @@
 // Controller Scripts - Event Listeners and Functions
 document.addEventListener("DOMContentLoaded", async function () {
   // const RESPONSE = await axios.get("/../data.json");
-  const TASK = await loadTask();
 
   // For Products
   const TASK_HEADER = ["ID", "Image", "Name", "Quantity", "Category", "Warehouse", "Availability", "Settings"];
@@ -19,5 +18,5 @@ document.addEventListener("DOMContentLoaded", async function () {
   // const TASK_HEADER = ["ID", "Image", "Name", "Department", "Email", "Joined", "Location", "Settings"];
   // const TASK_TYPE = "employees";
   
-  await main(TASK_HEADER, TASK, TASK_TYPE);
+  await main(TASK_HEADER, TASK_TYPE);
 })

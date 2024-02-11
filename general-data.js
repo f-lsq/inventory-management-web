@@ -62,5 +62,12 @@ async function loadTask() {
 }
 
 async function saveTask(data) {
+  const response = await axios.put(`${BASE_JSON_BIN_URL}/${BIN_ID}`,
+  data,
+  {
+    'Content-Type':"application/json",
+    'X-Master-Key': MASTER_KEY,
+  })
+  return response.data;
   
 }

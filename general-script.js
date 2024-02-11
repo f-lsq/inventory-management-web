@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
  * @param {*} data Data from JSON file
  * @param {*} type Type of item in each page (e.g. products, orders, customers, shipping)
  */
-async function main(header, data, type) {
+async function main(header, type) {
+  const data = await loadTask();
   displayTask(header, data, type);
 
   document.querySelector("#add-button").addEventListener("click", function(){
@@ -33,6 +34,12 @@ async function main(header, data, type) {
       displayTask(header, data, type);
     })
   })
+
+  const saveButton = document.querySelector("#save-button");
+  saveButton.addEventListener("click", async function(){
+    await saveTask(data);
+    alert("Changes have been saved");
+  });
 }
 
 /**

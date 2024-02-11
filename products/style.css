@@ -57,8 +57,7 @@
 }
 
 #add-button:hover {
-  background-color: #FFF200;
-  color: black;
+  background-color: rgb(13, 13, 73);
 }
 
 #filter-button {
@@ -72,12 +71,12 @@
 }
 
 #save-button {
-  background-color: rgb(255, 0, 0);
+  background-color: #FFF200;
   color: black;
 }
 
 #save-button:hover {
-  background-color: rgb(135, 135, 135);
+  background-color: #9c9400;
   color: white;
 }
 
