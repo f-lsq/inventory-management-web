@@ -61,9 +61,9 @@ async function displayTask(header, data, type) {
     for (let i of header) {
       const liElement = document.createElement("li");
       if (i == "Image") {
-        liElement.innerHTML = `<img class="item-image" src="${r[i.toLowerCase()]}"/>`
+        liElement.innerHTML = `<img class="item-${i.toLowerCase()}" src="${r[i.toLowerCase()]}"/>`
       } else if (i == "Settings") {
-        liElement.classList.add("item-settings");
+        liElement.classList.add(`item-${i.toLowerCase()}`);
         editButton = document.createElement("button")
         editButton.innerHTML = "<i class='bx bx-edit'></i>"
         editButton.classList.add("edit-button");
@@ -81,7 +81,7 @@ async function displayTask(header, data, type) {
         liElement.innerHTML = `$${r[i.toLowerCase()].toLocaleString()}`;
       } else {
         if (i == "Name" || i == "Address")  {
-          liElement.classList.add("item-name");
+          liElement.classList.add("item-double");
         }
         liElement.innerHTML = r[i.toLowerCase()];
         }
@@ -121,7 +121,7 @@ function createHeader(header) {
   for (let i of header) {
     const liElement = document.createElement("li");
     if (i == "Name" || i == "Address") {
-      liElement.classList.add("item-name");
+      liElement.classList.add("item-double");
     }
     liElement.innerHTML = i;
     ulElement.appendChild(liElement);

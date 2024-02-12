@@ -127,8 +127,8 @@
   padding: 0.5rem;
 }
 
-#item-header li.item-name,
-.item-item li.item-name
+#item-header li.item-double,
+.item-item li.item-double
  {
   flex: 2;
 }
