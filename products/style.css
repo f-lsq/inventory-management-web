@@ -1,3 +1,4 @@
+/* General CSS for all pages (Large Screen) */
 #main-summary,
 #main-body {
   margin: 2rem 1.2rem;
@@ -133,7 +134,7 @@
   flex: 2;
 }
 
-.item-image {
+.item-image img {
   height: 70%;
   width: 70%;
   object-fit: contain;
@@ -244,4 +245,9 @@
   border: 1px solid gray;
   border-radius: 3px;
   background-color: white;
+}
+
+/* Specific CSS for each page (Small Screen) */
+@media screen and (min-width:768px){
+
 }
