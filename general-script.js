@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // SCRIPT FOR SIDEBAR TOGGLE
   const menuBtn = document.querySelector("#menuBtn");
   const navbar = document.querySelector("#navbar");
+  const headerContainer = document.querySelector("#header-container");
 
   menuBtn.addEventListener("click", function () {
-    navbar.classList.toggle('active')
+    navbar.classList.toggle('active');
+    headerContainer.classList.toggle('active');
   });
 
   // SCRIPT FOR DARKMODE TOGGLE
@@ -13,6 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // darkMode.addEventListener("click", function(){
   //   body.classList.toggle("dark-mode");
   // }); 
+
+  // Display notification when bell icon is hovered over
+  bellIcon = document.querySelector("#main-header i")
+  bellIcon.addEventListener("mouseover", function(){
+    alert("No new notification!");
+  })
 })
 
 /**

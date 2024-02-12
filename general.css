@@ -1,3 +1,4 @@
+/* navbar CSS */
 *{
   margin: 0;
   padding:0;
@@ -241,4 +242,334 @@ body {
 
 .sub-header-separator {
   margin: 0 10px;
+}
+
+@media screen and (max-width:768px){
+  #navbar {
+    background: white;
+    box-shadow: none;
+    height: 85px;
+    position: absolute;
+  }
+
+  #menuBtn {
+    color:  rgb(2,3,129);
+  }
+
+  #nav-list-top li i, 
+  #nav-list-bottom li i,
+  #navbar ul li:hover .tooltip,
+  #nav-user {
+    display: none;
+  }
+
+  #header-container {
+    margin-left: calc(50px + 2 * 0.4rem);
+    transition: margin-left 0.5s;
+  }
+  
+  #main-content {
+    margin-left: 0;
+    transition: margin-left 0.5s;
+  }
+
+  /* When menuBtn is clicked, the active class will be toggled on. 
+  The following styles will apply. */
+  #navbar.active {
+    background: rgb(2,3,129);
+    height: 100vh;
+    position: fixed;
+  }
+
+  #navbar.active #menuBtn {
+    color: white;
+  }
+
+  #navbar.active #nav-list-top li i, 
+  #navbar.active #nav-list-bottom li i,
+  #navbar.active #navbar ul li:hover .tooltip{
+    display: block;
+  }
+
+  #navbar.active #nav-user {
+    display: flex;
+  }
+  
+  #header-container.active {
+    margin-left: 0;
+  }
+}
+
+/* main content CSS */
+#main-summary,
+#main-body {
+  margin: 2rem 1.2rem;
+  min-width: 700px;
+}
+
+#main-body {
+  background-color: white;
+  border-radius: 30px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#main-body h3 {
+  font-size: 1rem;
+}
+
+#main-body div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#add-button,
+#filter-button,
+#save-button {
+  font-size: 0.75rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, margin-top 0.15s, margin-bottom 0.15s, box-shadow 0.15s;
+  box-shadow: 0 0.1rem 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+#add-button i,
+#filter-button i,
+#save-button i {
+  margin-right: 5px;
+}
+
+#add-button:active,
+#filter-button:active,
+#save-button:active {
+  margin-top: calc(0.5rem + 0.1rem);  
+  margin-bottom: calc(0.5rem - 0.1rem);
+  box-shadow: none;
+}
+
+#add-button {
+  background-color: rgb(2,3,129);
+  color: white;
+}
+
+#add-button:hover {
+  background-color: rgb(13, 13, 73);
+}
+
+#filter-button {
+  background-color: rgb(224, 224, 224);
+  color: black;
+}
+
+#filter-button:hover {
+  background-color: rgb(135, 135, 135);
+  color: white;
+}
+
+#save-button {
+  background-color: #FFF200;
+  color: black;
+}
+
+#save-button:hover {
+  background-color: #9c9400;
+  color: white;
+}
+
+#search-terms {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(135, 135, 135);
+  border-radius: 5px; 
+  outline: none;
+}
+
+#search-terms::placeholder {
+  font-size: 0.75rem;
+}
+
+#item-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#item-header {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  margin: 0.5rem;
+}
+
+#item-header li {
+  border-top: 1px solid rgb(184, 184, 184);
+  border-bottom: 1px solid rgb(184, 184, 184);
+  flex: 1;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: rgb(63, 63, 63);
+  padding: 0.5rem;
+}
+
+.item-item {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.item-item li {
+  flex: 1;
+  text-wrap: wrap;
+  padding: 0.5rem;
+}
+
+#item-header li.item-double,
+.item-item li.item-double
+ {
+  flex: 2;
+}
+
+.item-image img {
+  height: 70%;
+  width: 70%;
+  object-fit: contain;
+}
+
+.edit-button,
+.delete-button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 0.2rem;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0.1rem 10px -5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s, margin-top 0.15s, box-shadow 0.15s;
+}
+
+.edit-button {
+  background-color: #0cb636;
+}
+
+.delete-button {
+  background-color: #DD1C1A;
+}
+
+.edit-button:hover {
+  background-color: #088527;
+}
+
+.delete-button:hover {
+  background-color: #bb1816;
+}
+
+.edit-button:active,
+.delete-button:active {
+  margin-top: 0.1rem;
+  box-shadow: none;
+}
+
+.item-settings {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#add-new-item {
+  display: none !important;
+  overflow: hidden;
+  color: rgb(51, 51, 51);
+}
+
+#add-new-item.add-active {
+  display: flex !important;
+  background-color: rgb(228, 228, 243);
+  flex-direction: column;
+  padding: 1.2rem 1.6rem;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+}
+
+#add-item-title {
+  width: 100%;
+  padding: 0.1rem;
+}
+
+#add-item-title h4 {
+  font-size: 0.8rem;
+}
+
+#add-item-title button {
+  border: none;
+  cursor: pointer;
+  background-color:rgb(20, 135, 217);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  box-shadow: 0 0.1rem 10px -5px rgba(0, 0, 0, 0.2);
+  font-size: 0.7rem;
+  transition: background-color 0.2s, margin-top 0.15s, margin-bottom 0.15s, box-shadow 0.15s;
+}
+
+#add-item-title button:hover {
+  background-color:rgb(11, 111, 182);
+}
+
+#add-item-title button:active {
+  margin-top: 0.1rem;
+  margin-bottom: -0.1rem;
+  box-shadow: none;
+}
+
+#add-item-inputs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+}
+
+#add-item-inputs div {
+  display: flex;
+  width: 220px;
+  margin: 0.3rem 0;
+}
+
+#add-item-inputs input {
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 3px;
+  background-color: white;
+}
+
+/* For small screens */
+@media screen and (max-width:768px){
+  #main-summary,
+  #main-body {
+  margin: 2rem 1.2rem;
+  min-width: 490px;
+}
+
+  #add-button p,
+  #save-button p {
+    display: none;
+  }
+
+  #add-button,
+  #save-button{
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  #add-button i,
+  #save-button i{
+    margin: 0;
+  }
 }
