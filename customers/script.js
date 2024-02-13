@@ -6,3 +6,4 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   await main(TASK_HEADER, TASK_TYPE);
 })
+
