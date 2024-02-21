@@ -302,13 +302,17 @@ body {
   #menuBtn:hover {
     color:  rgb(2,3,129);
   }
+
+  #navbar.active ~ #main-content{
+    margin-left: 0;
+  }
 }
 
 /* main content CSS */
 #main-summary,
 #main-body {
   margin: 2rem 1.2rem;
-  min-width: 700px;
+  min-width: calc(100vw-1.2rem);
 }
 
 #main-body {
@@ -558,7 +562,7 @@ body {
   #main-summary,
   #main-body {
   margin: 2rem 1.2rem;
-  min-width: 490px;
+  min-width: calc(100vw-1.2rem);
 }
 
   #add-button p,
@@ -576,4 +580,6 @@ body {
   #save-button i{
     margin: 0;
   }
+
+  
 }
